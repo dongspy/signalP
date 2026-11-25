@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sp-repro"
+version = "0.1.0"
+description = "Independent academic signal peptide prediction baseline"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = ["torch>=2.6,<3", "transformers>=4.48,<5"]
+
+[project.scripts]
+sp-repro = "sp_repro.cli:main"
+
+[tool.setuptools]
+packages = ["sp_repro"]
